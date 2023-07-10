@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/86bfd4f27e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section id="display" >
+        <div id="heading"><h1>Alarm Clock</h1></div>
+        <div id="clock"><span id="time"></span><span id="suffix"></span></div>
+        <div id="date"></div>
+        <div id="set-alarm">
+            Set Alarm
+        </div> 
+    </section>
+    <section id="editAlarmPopup" class="popup">
+            <!-- Popup content here -->
+            <div>
+                <h1>Edit Alarm</h1>
+                <span id="close-button">X</span>
+            </div>
+            
+            <form id="edit-alarm">
+            <div>
+                <label for="hours">hours</label>
+                <!-- <input type="number" id="hours">  -->
+                <select id="hours" name="hours" class="input">
+                    <option value="0">12 AM</option>
+                    <option value="1">1 AM</option>
+                    <option value="2">2 AM</option>
+                    <option value="3">3 AM</option>
+                    <option value="4">4 AM</option>
+                    <option value="5">5 AM</option>
+                    <option value="6">6 AM</option>
+                    <option value="7">7 AM</option>
+                    <option value="8">8 AM</option>
+                    <option value="9">9 AM</option>
+                    <option value="10">10 AM</option>
+                    <option value="11">11 AM</option>
+                    <option value="12">12 PM</option>
+                    <option value="13">1 PM</option>
+                    <option value="14">2 PM</option>
+                    <option value="15">3 PM</option>
+                    <option value="16">4 PM</option>
+                    <option value="17">5 PM</option>
+                    <option value="18">6 PM</option>
+                    <option value="19">7 PM</option>
+                    <option value="20">8 PM</option>
+                    <option value="21">9 PM</option>
+                    <option value="22">10 PM</option>
+                    <option value="23">11 PM</option>
+                </select>
+            </div>
+            <div>
+            <label for="minutes">minutes</label>
+            <select id="minutes" name="minutes" class="input">
+                <option value="0">00</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+                <option value="46">46</option>
+                <option value="47">47</option>
+                <option value="48">48</option>
+                <option value="49">49</option>
+                <option value="50">50</option>
+                <option value="51">51</option>
+                <option value="52">52</option>
+                <option value="53">53</option>
+                <option value="54">54</option>
+                <option value="55">55</option>
+                <option value="56">56</option>
+                <option value="57">57</option>
+                <option value="58">58</option>
+                <option value="59">59</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="sound">Sound</label>
+            <div class="input-group">
+                <select id="sound-option" name="sound-option" class="input">
+                    <option value="one">alarm-clock</option>
+                    <option value="two">alarm-simplified</option>
+                    <option value="three">clock-alarm</option>
+                    <option value="four">oversimplified-alarm</option>
+                    <option value="five">clock-strikes</option>
+                    <option value="six">digital-alarm</option>
+                </select>
+                <audio id="audio1" src="music/music1.mp3" type="audio/mp3"></audio>
+                <audio id="audio2" src="music/music2.mp3" type="audio/mp3"></audio>
+                <audio id="audio3" src="music/music3.mp3" type="audio/mp3"></audio>
+                <audio id="audio4" src="music/music4.mp3" type="audio/mp3"></audio>
+                <audio id="audio5" src="music/music5.mp3" type="audio/mp3"></audio>
+                <audio id="audio6" src="music/music6.mp3" type="audio/mp3"></audio>
+                <audio id="audio7" ></audio>
+                <span class="input-group-btn">
+                    <button type="button" id="audio-play-btn">
+                        <span id="audio-play-icon" ><i class="fa-solid fa-play cursor"></i></span>
+                        <span id="audio-pause-icon" ><i class="fa-solid fa-pause cursor"></i></span>
+                    </button>
+                    <button  type="button" id="audio-file-btn">
+                        <input type="file" id="input-file" class="h30-w40" accept="audio/*">
+                        <span><i class="fa-solid fa-ellipsis"></i></span>
+                    </button>
+                </span>
+            </div>    
+        </div>
+                  
+
+            <div id="repeatSound-container">
+            <label for="repeat-sound">Repeat Sound</label>
+                <input type="checkbox" id="repeat-sound">
+            </div>
+        <div id="title-container">
+            <label for="title">Title</label>
+            <input type="text" id="title" value="Alarm" class="input">
+        </div>
+        <div>
+            <button type="button" class="h30-w80" id="cancel" value="cancel">cancel</button>
+            <button type="button" class="h30-w80" id="save" value="save" >save</button>
+        </div>
+    </form>
+
+    </section>
+    <div id="alarm" class="alarm-popup">
+    <div id="alarm-title">Alarm</div>
+    <div id="alarm-time-container">
+        <span class="m10"><i class="fa-regular fa-bell"></i></span>
+        <span class="m10 fsXL-fw400" id="alarm-time">alarm-time</span>
+        <span id="alarm-suffix">am</span>
+    </div>
+    <div id="timer-container">
+        <span class="m10"><i class="fa-regular fa-clock"></i></span>
+        <span class="m10 fsL-fw400" id="timer">timer</span>
+    </div>
+    <div><button id="stop-alarm">Stop Alarm</button></div> 
+    </div>
+        
+    <script src="index.js"></script>
+</body>
+</html>

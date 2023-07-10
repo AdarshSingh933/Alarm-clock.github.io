@@ -1,0 +1,264 @@
+body{
+    background-color: black; 
+}
+#display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: orange;  
+    height: 57vh;
+}
+
+#display>div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#heading{
+  background-color: rgba(115, 122, 119, 0.626);
+  width: 100%;
+}
+#clock{
+  height: 100px;
+  width: 300px;
+  position: relative;
+}
+#time {
+    position: relative;
+    top:20px;
+    font-family:sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+   
+  }
+  #suffix{
+    position: relative;
+    top: -30px;
+    left: 109px;
+    font-size: 22px;
+  }
+  #date {
+    position: relative;
+    height: 100px;
+    width: 200px;
+    top: -17px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    font-size: 19px;
+    
+  }
+  #set-alarm{
+    width: 99px;
+    height: 36px;
+    background-color: rgb(81, 207, 132);
+    color: white;
+    position: relative;
+    top: -65px;
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+  }
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height:500px;
+    width: 500px;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    background-color: rgba(115, 122, 119, 0.626);
+    padding: 20px;
+  }
+  /*popup styling  */
+  .show {
+    visibility: visible;
+  }
+  #editAlarmPopup{
+    color: white;
+  }
+  
+ #close-button{
+    position: absolute;
+    top: 24px;
+    right: 26px;
+    cursor: pointer;
+ }
+ #edit-alarm>div{
+    display: inline-block;
+    margin: 20px;
+    width: 40%;
+ }
+/* #display.hide-elements,
+#display.hide-elements h1,
+#display.hide-elements #clock,
+#display.hide-elements #date,
+#display.hide-elements #set-alarm{
+  visibility: hidden;
+} */
+.hide-elements{
+  visibility: hidden;
+}
+.input-group{
+    height: 30px;
+    width:300px;
+}
+.input{
+    display: inline-block;
+    height: 30px;
+    width: 200px;
+    position: relative;
+    top:15px;
+}
+.input-group-btn{
+    height: 30px;
+    width: 100px;
+}
+.h30-w40{
+    height: 30px;
+    width: 40px;
+}
+#audio-play-btn{
+  height: 30px;
+  position: relative;
+  top: 15px;
+  width: 40px;
+  left: -3px;
+  border: none;
+}
+#audio-play-icon{
+  position: relative;
+  left: 4px;
+}
+.play-icon-hide{
+  visibility: hidden;
+}
+#audio-pause-icon{
+  position:relative;
+  left: -9px;
+  visibility: hidden;
+}
+/* .play-icon-hide + #audio-pause-icon {
+  visibility: visible;
+} */
+button #audio-pause-icon.pause-icon-show {
+  visibility: visible;
+}
+.cursor{
+    cursor:pointer;
+}  
+
+#input-file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#audio-file-btn {
+  position: absolute;
+  top: 229px;
+  left: 283px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#audio-file-btn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+  #repeat-sound{
+    position: relative;
+    left:-25px;
+    top: 24px;
+    height: 25px;
+    width: 25px;
+  }
+  #repeatSound-container>label{
+    position: relative;
+    top: 16px;
+    right: -101px;
+  }
+
+#title-container>input{
+    width:442px
+}
+.h30-w80{
+    height: 30px;
+    width: 80px;
+}
+#cancel{
+    position: relative;
+    top: 159px;
+    right: 241px;  
+}
+#save{
+    position: relative;
+    top: 159px;
+    left: 37px;
+    background-color: rgb(81, 207, 132);
+}
+.alarm-popup{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 40vh;
+  width: 60%;
+  color: orange;
+  background-color: rgb(17 17 17);
+  visibility: hidden;
+}
+.alarm-popup-show{
+  visibility: visible;
+}
+#alarm>div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+  width: 100%;
+}
+#alarm-suffix{
+  position: relative;
+  top: 3px;
+  left: -6px;
+}
+.m10{
+  margin: 10px;
+}
+.fsL-fw400{
+     font-size: large;
+     font-weight: 400;
+}
+.fsXL-fw400{
+  font-size: x-large;
+  font-weight: 400;
+}
+#stop-alarm{
+  height: 40px;
+  width: 98px;
+ background-color:rgb(239 98 98);
+}
+  
+
+  
+  
